@@ -154,7 +154,9 @@
     <ClInclude Include="cAlquiler.h" />
     <ClInclude Include="cClientes.h" />
     <ClInclude Include="cVehiculos.h" />
+    <ClInclude Include="fecha.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Lista.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +164,8 @@
     <ClCompile Include="cClientes.cpp" />
     <ClCompile Include="cVehiculos.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="fecha.cpp" />
+    <ClCompile Include="Lista.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
