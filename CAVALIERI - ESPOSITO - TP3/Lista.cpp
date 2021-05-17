@@ -34,12 +34,27 @@ Lista<T>::Lista(unsigned int TAM, bool EliminarContenido)
 
 
 }
+//-----------------------------SOBRECARGAS-----------------------------
 
 template<class T>
-T* Lista<T>::operator[](unsigned int pos) {
-	return getItem(pos);
+T* Lista<T>::operator[](unsigned int pos)
+{
+    return getItem(pos);
 }
 
+template<class T>
+void Lista<T>::operator << ()
+{
+	Listar();
+}
+
+template<class T>
+bool Lista<T>::operator++(T* item) 
+{
+	return AgregarItem(item);
+}
+
+//---------------------------------------------------------------------
 
 template<class T>
 Lista<T>::~Lista()
@@ -63,37 +78,24 @@ Lista<T>::~Lista()
 template<class T>
 void Lista<T>::Listar()
 {
-
 	for (unsigned int i = 0; i < CA; i++)
 	{
-		//vector[i]->Imprimir();// SOBRECARGA DEL COUT
+		vector[i]->Imprimir();
+
 	}
 }
-
 template<class T>
 bool Lista<T>::AgregarItem(T* item)
 {
-
 	T* i_f = BuscarItem(item);
 	if (i_f != NULL)throw new exception("Ya se encuentra en la lista");
 
 	if (CA < TAM)
 		vector[CA++] = item;
-	else throw new exception("No hay tama�o suficiente para agregar el item");;
+	else throw new exception("No hay tamanio suficiente para agregar el item");;
 	return true;
 }
 
-template<class T>
-bool Lista<T>::AgregarItemOrdenado(const T* item)
-{
-	/*for (unsigned int i = 0; i < CA; i++)
-	{
-	if (vector[i]->getclave() == clave)
-	return vector[i];
-	}
-	*/
-	return false;
-}
 template<class T>
 T* Lista<T>::Quitar(string clave) {
 
@@ -133,7 +135,7 @@ void Lista<T>::Eliminar(string clave) {
 
 	if (pos < CA)
 		Eliminar(pos);
-	//sino algo
+	else throw new exception("no pude eliminar");
 
 }
 template<class T>

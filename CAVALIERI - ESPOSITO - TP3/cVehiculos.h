@@ -1,27 +1,26 @@
 #pragma once
 #include <string>
+#include "funciones.h"
 
 using namespace std;
 
 class fecha;
 
-typedef enum {
-	Rosa,
-	Verde,
-	Azul,
-	Blanco,
-	Negro
-}eColor;
-
 class cVehiculos
 {
+protected:
 	int capacidad_pasajeros;
 	int chasis;
 	eColor color;
 	int patente;
 	int poliza;
-	float precio_dia;
+	const float tarifaBase;
 	fecha* ultimo_mantenimiento;
+public: 
+	cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento);
+	~cVehiculos();
+	virtual void imprimir();
+	virtual void PasosMantenimiento();
 
 };
 

@@ -1,18 +1,21 @@
 #pragma once
+#include <ctime>
+#include <string>
+using namespace std;
+
+
 class fecha
 {
-	int dia;
-	int mes; 
-	int anio;
+	unsigned int dia;
+	unsigned int mes; 
+	unsigned int anio;
 public: 
-	fecha(int dia, int mes, int anio) {
-		this->dia = dia;
-		this->mes = mes;
-		this->anio = anio;
-	}
+	fecha(unsigned int dia, unsigned int mes, unsigned int anio);
 
 	//si pide actualizar actual usamos localtime y lo guardamos en las variables
-	//verificar dia
+	void actualizar_fecha_a_hoy();
+	void verificar_fecha();
 
+	string fechaToString();
 };
 

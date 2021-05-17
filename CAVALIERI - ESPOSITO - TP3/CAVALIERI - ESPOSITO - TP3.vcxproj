@@ -152,16 +152,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="cAlquiler.h" />
+    <ClInclude Include="cAutos.h" />
+    <ClInclude Include="cCamionetas.h" />
     <ClInclude Include="cClientes.h" />
+    <ClInclude Include="cEmpresa.h" />
+    <ClInclude Include="cMotos.h" />
+    <ClInclude Include="cTrafics.h" />
     <ClInclude Include="cVehiculos.h" />
     <ClInclude Include="fecha.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="funciones.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cAlquiler.cpp" />
+    <ClCompile Include="cAutos.cpp" />
+    <ClCompile Include="cCamionetas.cpp" />
     <ClCompile Include="cClientes.cpp" />
+    <ClCompile Include="cEmpresa.cpp" />
+    <ClCompile Include="cMotos.cpp" />
+    <ClCompile Include="cTrafics.cpp" />
     <ClCompile Include="cVehiculos.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="fecha.cpp" />

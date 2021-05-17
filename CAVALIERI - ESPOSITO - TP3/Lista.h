@@ -19,7 +19,6 @@ public:
 	~Lista();
 
 	bool AgregarItem(T* item);
-	bool AgregarItemOrdenado(const T* item);
 
 	T* Quitar(string clave);
 	T* Quitar(T* item);
@@ -36,8 +35,12 @@ public:
 
 	T* BuscarItem(T* item);
 	T* getItem(unsigned int pos);
+	
+	//-------SOBRECARGAS-------
 	T* operator[](unsigned int pos);
-
+	void operator << ();
+	bool operator++(T* item);
+	//-------------------------
 
 	unsigned int getItemPos(string clave);
 	unsigned int getItemPos(T* item);
