@@ -15,7 +15,7 @@ class cMotos :
 public:
     cMotos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantCascos, float precioDia);
     ~cMotos();
-    void imprimir();
+    void Imprimir();
     float CalcularTarifa();
     void PasosMantenimiento();
 

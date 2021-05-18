@@ -1,6 +1,7 @@
 #pragma once
 #include "cVehiculos.h"
 #include "funciones.h"
+class fecha;
 class cCamionetas :
     public cVehiculos
 {
@@ -12,7 +13,7 @@ class cCamionetas :
 public:
     cCamionetas(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento,int cantSillaSeguridad, int cantPortaequipaje, float precioDia);
     ~cCamionetas();
-    void imprimir();
+    void Imprimir();
     float CalcularTarifa();
     void PasosMantenimiento();
 

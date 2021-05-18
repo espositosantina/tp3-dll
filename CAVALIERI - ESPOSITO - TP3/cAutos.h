@@ -2,6 +2,9 @@
 #include <iostream>
 #include "cVehiculos.h"
 #include "funciones.h"
+
+class fecha;
+
 class cAutos :
     public cVehiculos
 {
@@ -11,9 +14,8 @@ class cAutos :
 public:
     cAutos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantSillaSeguridad, float precioDia);
     ~cAutos();
-    void imprimir();
+    void Imprimir();
     float CalcularTarifa();
     void PasosMantenimiento();
-
 };
 

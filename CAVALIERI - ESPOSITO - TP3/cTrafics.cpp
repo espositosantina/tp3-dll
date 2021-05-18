@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "cTrafics.h"
 #include "funciones.h"
+#include "fecha.h"
 
 
 cTrafics::cTrafics(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantSillaSeguridad, int cantAsientosRebatibles, float precioDia) :cVehiculos(capacidad_pasajeros, chasis, color, patente, poliza, tarifaBase, ultimo_mantenimiento)
@@ -11,9 +12,9 @@ cTrafics::cTrafics(int capacidad_pasajeros, int chasis, eColor color, int patent
 }
 cTrafics::~cTrafics() {}
 
-void cTrafics::imprimir()
+void cTrafics::Imprimir()
 {
-    cVehiculos::imprimir();
+    cVehiculos::Imprimir();
     cout << "\n Cantidad de sillas de seguridad: " << cantSillaSeguridad << "\n Cantidad de asientos rebatibles: " << cantAsientosRebatibles << "\n Tarifa Total: " << CalcularTarifa() << endl;
 }
 
@@ -27,5 +28,6 @@ float cTrafics::CalcularTarifa()
 void cTrafics::PasosMantenimiento()
 {
     cVehiculos::PasosMantenimiento();
-    cout << "inventar pasos de mantenimiento de trafics";
+     cout << "1)Limpiar trafic" << endl << "2)Cambiar ruedas" << endl;
+     ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }

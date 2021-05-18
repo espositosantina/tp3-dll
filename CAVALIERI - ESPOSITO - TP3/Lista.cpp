@@ -1,5 +1,6 @@
 ﻿#include "pch.h"
 #include "Lista.h"
+#include <ostream>
 
 
 template<class T>
@@ -42,10 +43,16 @@ T* Lista<T>::operator[](unsigned int pos)
     return getItem(pos);
 }
 
+//template<class T>
+//void Lista<T>::operator<< ()
+//{
+//	Listar();
+//}
+
 template<class T>
-void Lista<T>::operator << ()
+ostream& Lista<T>::operator<<(ostream& salida, T** lista)
 {
-	Listar();
+	// TODO: Insertar una instrucción "return" aquí
 }
 
 template<class T>
@@ -80,10 +87,11 @@ void Lista<T>::Listar()
 {
 	for (unsigned int i = 0; i < CA; i++)
 	{
-		vector[i]->Imprimir();
+		vector[i]->Imprimir();//sobrecarga del cout
 
 	}
 }
+
 template<class T>
 bool Lista<T>::AgregarItem(T* item)
 {

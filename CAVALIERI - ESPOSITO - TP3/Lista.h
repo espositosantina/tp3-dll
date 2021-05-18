@@ -1,6 +1,7 @@
 #pragma once
 #define NMAX 10
 #include <string>
+#include <ostream>
 using namespace std;
 
 
@@ -38,7 +39,8 @@ public:
 	
 	//-------SOBRECARGAS-------
 	T* operator[](unsigned int pos);
-	void operator << ();
+	//void operator << ();
+	ostream& operator<< (ostream& salida, T** vector);
 	bool operator++(T* item);
 	//-------------------------
 

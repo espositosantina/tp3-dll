@@ -22,6 +22,7 @@ public:
 	void AdquirirNuevosVehiculos(); 
 	void RetirarCirculacion();
 	void RealizarMantenimiento();
+
 	void alquilar();
 
 

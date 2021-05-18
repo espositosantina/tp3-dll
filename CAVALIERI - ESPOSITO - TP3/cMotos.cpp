@@ -2,6 +2,7 @@
 #include "cMotos.h"
 #include "funciones.h"
 #include "cVehiculos.h"
+#include "fecha.h"
 
 cMotos::cMotos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantCascos, float precioDia):cVehiculos(capacidad_pasajeros, chasis, color, patente, poliza, tarifaBase, ultimo_mantenimiento)
 {
@@ -11,9 +12,9 @@ cMotos::cMotos(int capacidad_pasajeros, int chasis, eColor color, int patente, i
 
 cMotos::~cMotos() {}
 
-void cMotos::imprimir()
+void cMotos::Imprimir()
 {
-    cVehiculos::imprimir();
+    cVehiculos::Imprimir();
     cout << "\n Cantidad de cascos: " << cantCascos << "\n Tarifa Total: " << CalcularTarifa() << endl;
 }
 
@@ -28,5 +29,6 @@ float cMotos::CalcularTarifa()
 void cMotos::PasosMantenimiento()
 {
     cVehiculos::PasosMantenimiento();
-    cout << "inventar pasos de mantenimiento de motos";
+     cout << "1)Limpiar moto y cascos" << endl << "2)Cambiar ruedas" << endl;
+     ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }
