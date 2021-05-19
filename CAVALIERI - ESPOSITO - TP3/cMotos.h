@@ -6,8 +6,7 @@ using namespace std;
 class cVehiculos;
 class fecha;
 
-class cMotos :
-    public cVehiculos
+class cMotos : public cVehiculos
 {
     //Las motocicletas pueden añadir el alquiler de uno o dos cascos.
     int cantCascos;
