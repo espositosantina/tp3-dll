@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "fecha.h"
+#define _CRT_SECURE_NO_WARNINGS
 	
 fecha::fecha(unsigned int dia, unsigned int mes, unsigned int anio)
 {

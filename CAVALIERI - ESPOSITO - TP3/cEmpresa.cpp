@@ -10,7 +10,6 @@ cEmpresa::cEmpresa()
 	Lista<cVehiculos> listaV(50, false);
 	Lista<cAlquiler> listaA(50, false);
 	Lista<cClientes> listaC(50, false);
-
 }
 
 cEmpresa::~cEmpresa()

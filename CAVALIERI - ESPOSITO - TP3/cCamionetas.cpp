@@ -13,11 +13,18 @@ cCamionetas::cCamionetas(int capacidad_pasajeros, int chasis, eColor color, int 
 cCamionetas::~cCamionetas()
 {
 }
-
 void cCamionetas::Imprimir()
 {
-   cVehiculos::Imprimir();
-   cout << "\n Cantidad de sillas de seguridad: " << cantSillaSeguridad << "\n Cantidad de portaequipajes: " << cantPortaequipaje << "\n Tarifa Total: " << CalcularTarifa() << endl;
+    string info = To_string();
+    cout << info << endl;
+}
+
+
+string cCamionetas::To_string()
+{
+    string infooo = cVehiculos::To_string();
+    string info = infooo + "\nCantidad de sillas de seguridad: " + to_string(cantSillaSeguridad) + "\n Cantidad de portaequipajes: " + to_string(cantPortaequipaje) + "\n Tarifa Total: " + to_string(CalcularTarifa());
+    return info;
 }
 
 float cCamionetas::CalcularTarifa()

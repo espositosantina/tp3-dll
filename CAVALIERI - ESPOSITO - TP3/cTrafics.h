@@ -15,6 +15,7 @@ public:
     cTrafics(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento,int cantSillaSeguridad, int cantAsientosRebatibles, float precioDia);
     ~cTrafics();
     void Imprimir();
+    string To_string();
     float CalcularTarifa();
     void PasosMantenimiento();
 

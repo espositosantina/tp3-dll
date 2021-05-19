@@ -14,10 +14,17 @@ cMotos::~cMotos() {}
 
 void cMotos::Imprimir()
 {
-    cVehiculos::Imprimir();
-    cout << "\n Cantidad de cascos: " << cantCascos << "\n Tarifa Total: " << CalcularTarifa() << endl;
+    string info = To_string();
+    cout << info << endl;
 }
 
+
+string cMotos::To_string()
+{
+    string infooo = cVehiculos::To_string();
+    string info = infooo + "\n Cantidad de cascos: " + to_string(cantCascos) + "\n Tarifa Total: " + to_string(CalcularTarifa());
+    return info;
+}
 
 float cMotos::CalcularTarifa()
 {

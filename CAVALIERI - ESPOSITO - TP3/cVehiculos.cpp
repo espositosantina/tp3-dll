@@ -13,23 +13,30 @@ cVehiculos::cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int pa
 	this->ultimo_mantenimiento = ultimo_mantenimiento;
 	ultimo_mantenimiento->verificar_fecha();
 }
-void cVehiculos::Imprimir() {
+cVehiculos::~cVehiculos()
+{
+}
+string cVehiculos::To_string() 
+{
 
-	cout << "\n Capacidad de pasajeros: " << capacidad_pasajeros << "\n Numero de Chasis: " << chasis << "\n Color: ";
-	PrintEnum(color);
-	cout << "\n Patente: " << patente << "\n Poliza: " << poliza << "\n Fecha: " << ultimo_mantenimiento->fechaToString() << endl;
+	return "\n Capacidad de pasajeros: " + to_string(capacidad_pasajeros)+
+		   "\n Numero de Chasis: " + to_string(chasis) +
+		   "\n Color: " + PrintEnum(color) +
+	       "\n Patente: " + to_string(patente) + 
+		   "\n Poliza: " + to_string(poliza) +
+		   "\n Fecha: " + ultimo_mantenimiento->fechaToString();
 	
 }
 
-void cVehiculos::ImprimirVehiculo(string tipo)
-{
-	switch (tipo)
-	{
-	case 1: tipo= auto imprimir()...
-	default:
-		break;
-	}
-}
+//void cVehiculos::ImprimirVehiculo(string tipo)
+//{
+//	switch (tipo)
+//	{
+//	case 1: tipo= auto imprimir()...
+//	default:
+//		break;
+//	}
+//}
 
 void cVehiculos::PasosMantenimiento()
 {

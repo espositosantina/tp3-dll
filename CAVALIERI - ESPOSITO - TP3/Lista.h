@@ -39,8 +39,6 @@ public:
 	
 	//-------SOBRECARGAS-------
 	T* operator[](unsigned int pos);
-	//void operator << ();
-	ostream& operator<< (ostream& salida, T** vector);
 	bool operator++(T* item);
 	//-------------------------
 

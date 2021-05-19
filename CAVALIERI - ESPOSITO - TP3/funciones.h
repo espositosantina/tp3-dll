@@ -11,15 +11,16 @@ typedef enum {
 	Negro
 }eColor;
 
-void PrintEnum(int color)
+string PrintEnum(int color)
 {
+
 	switch (color)
 	{
-	case Rosa: cout << "Rosa" << endl; break;
-	case Verde: cout << "Verde" << endl; break;
-	case Azul: cout << "Azul" << endl; break;
-	case Blanco: cout << "Blanco" << endl; break;
-	case Negro: cout << "Negro" << endl; break;
+	case 0: return "Rosa";
+	case 1: return "Verde";
+	case 2: return "Azul";
+	case 3: return "Blanco";
+	case 4: return "Negro";
 	default:
 		break;
 	}

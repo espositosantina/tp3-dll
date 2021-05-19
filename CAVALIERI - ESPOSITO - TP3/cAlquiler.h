@@ -6,7 +6,7 @@ using namespace std;
 class cClientes;
 class cVehiculos;
 class fecha;
-class Lista;
+class T;
 
 class cAlquiler
 {
@@ -27,7 +27,7 @@ class cAlquiler
 	fecha* fin_reserva;
 	float montoTotal;
 	string tipo;
-	Lista* listaAlquiler;
+	T* listaAlquiler;
 public: 
 	cAlquiler(cClientes* cliente,cVehiculos* vehiculo,int cant_ElementosSeguridad,fecha* inicio_reserva,fecha* fin_reserva,float montoTotal,string tipo, Lista* listaAlquiler);
 	~cAlquiler();

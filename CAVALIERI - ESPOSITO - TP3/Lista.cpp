@@ -1,6 +1,6 @@
 ﻿#include "pch.h"
 #include "Lista.h"
-#include <ostream>
+#include <iostream>
 
 
 template<class T>
@@ -41,18 +41,6 @@ template<class T>
 T* Lista<T>::operator[](unsigned int pos)
 {
     return getItem(pos);
-}
-
-//template<class T>
-//void Lista<T>::operator<< ()
-//{
-//	Listar();
-//}
-
-template<class T>
-ostream& Lista<T>::operator<<(ostream& salida, T** lista)
-{
-	// TODO: Insertar una instrucción "return" aquí
 }
 
 template<class T>

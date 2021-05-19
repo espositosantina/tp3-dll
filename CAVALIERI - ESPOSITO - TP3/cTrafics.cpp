@@ -14,8 +14,16 @@ cTrafics::~cTrafics() {}
 
 void cTrafics::Imprimir()
 {
-    cVehiculos::Imprimir();
-    cout << "\n Cantidad de sillas de seguridad: " << cantSillaSeguridad << "\n Cantidad de asientos rebatibles: " << cantAsientosRebatibles << "\n Tarifa Total: " << CalcularTarifa() << endl;
+    string info = To_string();
+    cout << info << endl;
+}
+
+
+string cTrafics::To_string()
+{
+    string infooo = cVehiculos::To_string();
+    string info = infooo + "\nCantidad de sillas de seguridad: " + to_string(cantSillaSeguridad) + "\n Cantidad de asientos rebatibles: " + to_string(cantAsientosRebatibles) + "\n Tarifa Total: " + to_string(CalcularTarifa());
+    return info;
 }
 
 float cTrafics::CalcularTarifa()

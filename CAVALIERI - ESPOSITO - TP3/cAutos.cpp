@@ -15,9 +15,19 @@ cAutos::~cAutos()
 
 void cAutos::Imprimir()
 {
-    cVehiculos::Imprimir();
-    cout << "\n Cantidad de sillas de seguridad: " << cantSillaSeguridad << "\n Tarifa Total: " << CalcularTarifa() << endl;
+    string info = To_string();
+    cout << info << endl;
 }
+
+
+string cAutos::To_string()
+{
+    string infooo= cVehiculos::To_string();
+    string info= infooo + "\nCantidad de sillas de seguridad: " + to_string(cantSillaSeguridad) +
+                          "\n Tarifa Total: " + to_string(CalcularTarifa());
+    return info;
+}
+
 
 float cAutos::CalcularTarifa()
 {
@@ -31,6 +41,10 @@ void cAutos::PasosMantenimiento()
     cVehiculos::PasosMantenimiento();
     cout << "1)Limpiar auto" << endl << "2)Cambiar ruedas" << endl;
     ultimo_mantenimiento->actualizar_fecha_a_hoy();
- 
 }
 
+ostream& operator<<(ostream& salida, string& info)
+{
+    salida << info;
+    return salida;
+}

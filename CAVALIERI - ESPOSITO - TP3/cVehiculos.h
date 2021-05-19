@@ -20,9 +20,9 @@ protected:
 	
 public: 
 	cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento);
-	~cVehiculos();
-	virtual void Imprimir();
-	void ImprimirVehiculo(string tipo);
+	virtual ~cVehiculos();
+	virtual string To_string();
+	//void ImprimirVehiculo(string tipo);
 	virtual void PasosMantenimiento();
 };
 

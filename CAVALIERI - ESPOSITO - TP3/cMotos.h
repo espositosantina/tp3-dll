@@ -16,6 +16,7 @@ public:
     cMotos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantCascos, float precioDia);
     ~cMotos();
     void Imprimir();
+    string To_string();
     float CalcularTarifa();
     void PasosMantenimiento();
 
