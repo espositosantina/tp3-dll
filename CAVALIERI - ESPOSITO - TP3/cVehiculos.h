@@ -17,12 +17,17 @@ protected:
 	int poliza;
 	const float tarifaBase;
 	fecha* ultimo_mantenimiento;
+	bool esta_circulando;
 	
 public: 
-	cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento);
+	cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando);
 	virtual ~cVehiculos();
 	virtual string To_string();
+	virtual void Imprimir();
 	//void ImprimirVehiculo(string tipo);
 	virtual void PasosMantenimiento();
+	virtual void set_circulacion(bool circ); //agragar a todos los tipos
+	virtual bool get_circulacion();
+	virtual void alquilar_vehiculo();
 };
 

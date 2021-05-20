@@ -4,7 +4,7 @@
 #include "fecha.h"
 
 
-cTrafics::cTrafics(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantSillaSeguridad, int cantAsientosRebatibles, float precioDia) :cVehiculos(capacidad_pasajeros, chasis, color, patente, poliza, tarifaBase, ultimo_mantenimiento)
+cTrafics::cTrafics(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando, int cantSillaSeguridad, int cantAsientosRebatibles, float precioDia) :cVehiculos(capacidad_pasajeros, chasis, color, patente, poliza, tarifaBase, ultimo_mantenimiento, esta_circulando)
 {
     this->cantSillaSeguridad = cantSillaSeguridad;
     this->cantAsientosRebatibles = cantAsientosRebatibles;

@@ -163,7 +163,6 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="funciones.h" />
     <ClInclude Include="Lista.h" />
-    <ClInclude Include="ListaVehiculos.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -178,7 +177,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="fecha.cpp" />
     <ClCompile Include="Lista.cpp" />
-    <ClCompile Include="ListaVehiculos.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

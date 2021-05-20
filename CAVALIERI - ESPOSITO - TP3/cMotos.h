@@ -12,7 +12,7 @@ class cMotos : public cVehiculos
     int cantCascos;
     float precioDia;
 public:
-    cMotos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantCascos, float precioDia);
+    cMotos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando, int cantCascos, float precioDia);
     ~cMotos();
     void Imprimir();
     string To_string();

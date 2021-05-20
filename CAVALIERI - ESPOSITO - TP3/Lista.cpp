@@ -32,8 +32,6 @@ Lista<T>::Lista(unsigned int TAM, bool EliminarContenido)
 
 	this->TAM = TAM;
 	CA = 0;
-
-
 }
 //-----------------------------SOBRECARGAS-----------------------------
 

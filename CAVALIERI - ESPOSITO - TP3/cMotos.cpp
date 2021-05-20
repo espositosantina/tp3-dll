@@ -4,7 +4,7 @@
 #include "cVehiculos.h"
 #include "fecha.h"
 
-cMotos::cMotos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantCascos, float precioDia):cVehiculos(capacidad_pasajeros, chasis, color, patente, poliza, tarifaBase, ultimo_mantenimiento)
+cMotos::cMotos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando, int cantCascos, float precioDia):cVehiculos(capacidad_pasajeros, chasis, color, patente, poliza, tarifaBase, ultimo_mantenimiento, esta_circulando)
 {
     this->cantCascos = cantCascos;
     this->precioDia = precioDia;

@@ -5,7 +5,7 @@ class cClientes
 	const int dni;
 
 public:
-	cClientes():dni(dni) {}; 
-
+	cClientes(const int dni); 
+	~cClientes();
 };
 

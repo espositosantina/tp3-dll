@@ -29,13 +29,13 @@ string fecha::fechaToString()
 		fecha_str += "0" + to_string(dia);
 	else
 		fecha_str += to_string(dia);
-	fecha_str += ":";
+	fecha_str += "/";
 
 	if (mes < 10)
 		fecha_str += "0" + to_string(mes);
 	else
 		fecha_str += to_string(mes);
-	fecha_str += ":";
+	fecha_str += "/";
 
 	fecha_str += to_string(anio);
 	return fecha_str;

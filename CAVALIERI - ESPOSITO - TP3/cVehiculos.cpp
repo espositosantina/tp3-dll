@@ -3,7 +3,7 @@
 #include "fecha.h"
 #include "funciones.h"
 
-cVehiculos::cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento): tarifaBase(tarifaBase)
+cVehiculos::cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando): tarifaBase(tarifaBase)
 {
 	this->capacidad_pasajeros = capacidad_pasajeros;
 	this->chasis = chasis;
@@ -12,6 +12,7 @@ cVehiculos::cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int pa
 	this->poliza = poliza;
 	this->ultimo_mantenimiento = ultimo_mantenimiento;
 	ultimo_mantenimiento->verificar_fecha();
+	this->esta_circulando = esta_circulando;
 }
 cVehiculos::~cVehiculos()
 {
@@ -27,6 +28,7 @@ string cVehiculos::To_string()
 		   "\n Fecha: " + ultimo_mantenimiento->fechaToString();
 	
 }
+void cVehiculos::Imprimir() {}
 
 //void cVehiculos::ImprimirVehiculo(string tipo)
 //{
@@ -41,4 +43,13 @@ string cVehiculos::To_string()
 void cVehiculos::PasosMantenimiento()
 {
 	cout << "\n Pasos mantenimiento: ";
+}
+
+void cVehiculos::set_circulacion(bool circ)
+{
+	esta_circulando = circ;
+}
+bool cVehiculos::get_circulacion()
+{
+	return esta_circulando;
 }

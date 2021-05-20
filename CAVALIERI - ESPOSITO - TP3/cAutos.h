@@ -15,7 +15,7 @@ class cAutos :
     int cantSillaSeguridad;
     float precioDia;
 public:
-    cAutos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, int cantSillaSeguridad, float precioDia);
+    cAutos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando, int cantSillaSeguridad, float precioDia);
     ~cAutos();
     void Imprimir();
     string To_string();

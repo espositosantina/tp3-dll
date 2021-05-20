@@ -8,6 +8,7 @@ using namespace std;
 class cVehiculos;
 class cClientes;
 class cAlquiler;
+class T;
 
 class cEmpresa
 {
@@ -15,15 +16,20 @@ class cEmpresa
 	/*Además de alquilar los vehículos, la empresa tiene la capacidad de adquirir
 		nuevos vehículos, de retirarlos de circulación y de realizarles mantenimiento.*/
 
+	Lista<cAlquiler>* lista_alquileres;
+	Lista<cVehiculos>* lista_vehiculos;
+	Lista<cClientes>* lista_clientes;
+
 public: 
-	cEmpresa();
+	cEmpresa(Lista<cVehiculos>* lista_vehiculos, Lista<cClientes>* lista_clientes, Lista<cAlquiler>* lista_alquileres);
 	~cEmpresa();
 
-	void AdquirirNuevosVehiculos(); 
-	void RetirarCirculacion();
-	void RealizarMantenimiento();
+	void AdquirirNuevosVehiculos(cVehiculos* vehiculo);
+	void ComenzarCirculacion(int patente);
+	void RetirarCirculacion(int patente);
+	void RealizarMantenimiento(int patente);
 
-	void alquilar();
+	void Alquilar(int patente);
 
 
 };

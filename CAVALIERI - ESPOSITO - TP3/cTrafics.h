@@ -12,7 +12,7 @@ class cTrafics :
     int cantAsientosRebatibles;
     float precioDia;
 public:
-    cTrafics(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento,int cantSillaSeguridad, int cantAsientosRebatibles, float precioDia);
+    cTrafics(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando,int cantSillaSeguridad, int cantAsientosRebatibles, float precioDia);
     ~cTrafics();
     void Imprimir();
     string To_string();
