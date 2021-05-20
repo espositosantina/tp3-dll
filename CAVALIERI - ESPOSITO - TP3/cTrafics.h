@@ -18,6 +18,7 @@ public:
     string To_string();
     float CalcularTarifa();
     void PasosMantenimiento();
-
+    void set_circulacion(bool circ);
+    bool get_circulacion();
 };
 

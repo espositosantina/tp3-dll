@@ -39,3 +39,12 @@ void cTrafics::PasosMantenimiento()
      cout << "1)Limpiar trafic" << endl << "2)Cambiar ruedas" << endl;
      ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }
+
+void cTrafics::set_circulacion(bool circ)
+{
+    esta_circulando = circ;
+}
+bool cTrafics::get_circulacion()
+{
+    return esta_circulando;
+}

@@ -26,8 +26,9 @@ public:
 	virtual void Imprimir();
 	//void ImprimirVehiculo(string tipo);
 	virtual void PasosMantenimiento();
-	virtual void set_circulacion(bool circ); //agragar a todos los tipos
+	virtual void set_circulacion(bool circ);
 	virtual bool get_circulacion();
-	virtual void alquilar_vehiculo();
+	virtual void alquilar_vehiculo(); //capaz hay que agregarlo a todos los tipos
+	virtual float CalcularTarifa() {}
 };
 

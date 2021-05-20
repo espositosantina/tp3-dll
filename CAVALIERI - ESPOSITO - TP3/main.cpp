@@ -13,6 +13,7 @@
 #include "cAlquiler.h"
 #include "cClientes.h"
 #include "Lista.h"
+#include "cListaAlquileres.h"
 
 
 using namespace std;
@@ -21,6 +22,10 @@ using namespace std;
 int main()
 {
 	fecha fecha1 = fecha(1, 1, 1);
+
+	/*cAlquiler* alquiler();
+	cListaAlquileres* lista_alquileres = ;
+	lista_alquileres->AgregarItem(alquiler());*/
 
 
 	Lista<cAlquiler> listaA(10, false);
@@ -36,7 +41,7 @@ int main()
 
 	cEmpresa* empresa = new cEmpresa(&listaV, &listaC, &listaA);
 
-	//---------------------HACEMOS COSAS---------------------
+	//---------------------IMPLEMENTAMOS METODOS---------------------
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -53,7 +58,7 @@ int main()
 	//en realidad, comenzar y retirar circulacion deberian llamarse dentro de la funcion alquilar
 
 
-	//-----------------TERMINAMOS DE HACER COSAS-----------------
+	//-----------------TERMINAMOS DE IMPLEMENTAR METODOS-----------------
 
 	for (int i = 0; i < 4; i++)
 	{

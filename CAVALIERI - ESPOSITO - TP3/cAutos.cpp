@@ -43,8 +43,17 @@ void cAutos::PasosMantenimiento()
     ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }
 
-ostream& operator<<(ostream& salida, string& info)
+//ostream& operator<<(ostream& salida, string& info)
+//{
+//    salida << info;
+//    return salida;
+//}
+
+void cAutos::set_circulacion(bool circ)
 {
-    salida << info;
-    return salida;
+    esta_circulando = circ;
+}
+bool cAutos::get_circulacion()
+{
+    return esta_circulando;
 }

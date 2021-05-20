@@ -42,7 +42,7 @@ T* Lista<T>::operator[](unsigned int pos)
 }
 
 template<class T>
-bool Lista<T>::operator++(T* item) 
+bool Lista<T>::operator+(T* item) 
 {
 	return AgregarItem(item);
 }

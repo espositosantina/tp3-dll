@@ -156,6 +156,7 @@
     <ClInclude Include="cCamionetas.h" />
     <ClInclude Include="cClientes.h" />
     <ClInclude Include="cEmpresa.h" />
+    <ClInclude Include="cListaAlquileres.h" />
     <ClInclude Include="cMotos.h" />
     <ClInclude Include="cTrafics.h" />
     <ClInclude Include="cVehiculos.h" />
@@ -171,6 +172,7 @@
     <ClCompile Include="cCamionetas.cpp" />
     <ClCompile Include="cClientes.cpp" />
     <ClCompile Include="cEmpresa.cpp" />
+    <ClCompile Include="cListaAlquileres.cpp" />
     <ClCompile Include="cMotos.cpp" />
     <ClCompile Include="cTrafics.cpp" />
     <ClCompile Include="cVehiculos.cpp" />

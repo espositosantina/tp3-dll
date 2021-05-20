@@ -40,3 +40,12 @@ void cCamionetas::PasosMantenimiento()
     cout << "1)Limpiar camioneta" << endl << "2)Cambiar ruedas" << endl;
     ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }
+
+void cCamionetas::set_circulacion(bool circ)
+{
+    esta_circulando = circ;
+}
+bool cCamionetas::get_circulacion()
+{
+    return esta_circulando;
+}

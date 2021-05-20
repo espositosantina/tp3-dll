@@ -10,7 +10,7 @@ class T;
 
 class cAlquiler
 {
-	
+	friend class cListaAlquileres;
 	/*En los alquileres se detalla el cliente, el vehículo, la cantidad de cada uno de los elementos
 	de seguridad / adicionales involucrados, la fecha de inicio y de fin de la reserva y el monto
 	total.
@@ -21,19 +21,20 @@ class cAlquiler
 
 
 	int dni;
-	int patente;
+	cVehiculos* vehiculo;
 	int cant_ElementosSeguridad;
 	fecha* inicio_reserva;
 	fecha* fin_reserva;
 	float montoTotal;
 
 public: 
-	cAlquiler(int dni, int patente,int cant_ElementosSeguridad,fecha* inicio_reserva,fecha* fin_reserva,float montoTotal);
+	cAlquiler(int dni, cVehiculos* vehiculo,int cant_ElementosSeguridad,fecha* inicio_reserva,fecha* fin_reserva);
 	~cAlquiler();
 
+	void setMontoTotal(int patente);
 	void Imprimir();//cada alquiler
 	//cuando imprimo la lista de alquileres tambien imprimir la ganancia total (suma de todos los alquileres)
 
-	void registrar_alquiler(int patente);
+	void registrar_alquiler(cVehiculos* vehiculo);
 };
 

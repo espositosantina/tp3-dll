@@ -21,12 +21,14 @@ public:
     string To_string();
     float CalcularTarifa();
     void PasosMantenimiento();
+    void set_circulacion(bool circ);
+    bool get_circulacion();
 };
 
-ostream& operator<< (ostream& salida, string& info);
-
-ostream& operator<< (ostream& salida, cVehiculos& V)
-{
-    salida << V.To_string();
-    return salida;
-}
+//ostream& operator<< (ostream& salida, string& info);
+//
+//ostream& operator<< (ostream& salida, cVehiculos& V)
+//{
+//    salida << V.To_string();
+//    return salida;
+//}

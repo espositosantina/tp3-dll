@@ -16,8 +16,8 @@ protected:
 
 	void Redimensionalizar();
 public:
-	Lista(unsigned int TAM = NMAX, bool EliminarContenido = true);
-	~Lista();
+	virtual Lista(unsigned int TAM = NMAX, bool EliminarContenido = true);
+	virtual ~Lista();
 
 	bool AgregarItem(T* item);
 
@@ -39,7 +39,7 @@ public:
 	
 	//-------SOBRECARGAS-------
 	T* operator[](unsigned int pos);
-	bool operator++(T* item);
+	bool operator+(T* item);
 	//-------------------------
 
 	unsigned int getItemPos(string clave);
