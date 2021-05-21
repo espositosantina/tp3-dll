@@ -20,4 +20,6 @@ public:
     void PasosMantenimientoMotos();
     void set_circulacion(bool circ);
     bool get_circulacion();
+    int getPatente();
+
 };

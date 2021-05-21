@@ -36,7 +36,12 @@ RealizarMantenimiento     ->  usamos dynamic cast o no..?
 
 lista Alquileres:
 registrar_alquiler       -> como lo agregamos a la lista con operator
-listarPorTipoVehiculo   ??
+                         -> tengo que eliminar el alquiler que creo ?
+listarPorTipoVehiculo  -> Se debe poder listar todos los alquileres por tipo de vehiculo y calcular la ganancia total de eso
+                       -> tengo que crear mini listas y calcular la ganancia total de cada clase de vehiculos?
+					   o pudeo simplemente crar un string q tenga las paatentes de los vehiculos de esa clase ?
+
+
 
 cliente:
 se tiene que imprimir

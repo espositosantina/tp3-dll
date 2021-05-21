@@ -29,6 +29,7 @@ public:
 	virtual void set_circulacion(bool circ);
 	virtual bool get_circulacion();
 	virtual float CalcularTarifa() {}
+	virtual int getPatente() {}
 };
 
 

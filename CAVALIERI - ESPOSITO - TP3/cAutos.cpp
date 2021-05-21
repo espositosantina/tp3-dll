@@ -59,3 +59,8 @@ bool cAutos::get_circulacion()
 {
     return esta_circulando;
 }
+
+int cAutos::getPatente()
+{
+    return patente;
+}

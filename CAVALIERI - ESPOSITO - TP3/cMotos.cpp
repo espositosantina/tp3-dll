@@ -50,3 +50,8 @@ bool cMotos::get_circulacion()
 {
     return esta_circulando;
 }
+
+int cMotos::getPatente()
+{
+    return patente;
+}

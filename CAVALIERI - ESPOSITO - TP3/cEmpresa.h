@@ -34,7 +34,7 @@ public:
 	void RetirarCirculacion(int patente);
 	void RealizarMantenimiento(int patente);
 
-	void Alquilar(int patente);
+	void Alquilar(int dni, cVehiculos* vehiculo, int cant_ElementosSeguridad, fecha* inicio_reserva, fecha* fin_reserva);
 
 
 };

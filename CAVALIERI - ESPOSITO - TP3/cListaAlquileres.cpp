@@ -4,6 +4,10 @@
 #include "Lista.h"
 #include "cVehiculos.h"
 #include "fecha.h"
+#include "cAutos.h"
+#include "cCamionetas.h"
+#include "cMotos.h"
+#include "cTrafics.h"
 
 
 cListaAlquileres::cListaAlquileres(unsigned int TAM): Lista<cAlquiler>(TAM)
@@ -17,23 +21,32 @@ cListaAlquileres::~cListaAlquileres()
 
 void cListaAlquileres::listarPorTipoVehiculo()
 {
-	/* 
-	* 
-	A *abc[3]; 
-	B* B_aux; 
-	B_aux = dynamic_cast<B*>(abc[1]); //B PUEDE ACCEDER A LOS ATRIBUTOS DE A
-	B_aux->b = 10;
-	
-	
-	int i = 0;
-	while (!v[i])
+	/*Se debe poder listar todos los alquileres por tipo de vehiculo y calcular la ganancia total de
+		eso.*/
+
+	for (int i = 0; i < CA; i++)
 	{
-,		cListaAlquileres* cListaAlquileres_aux;
-		cListaAlquileres_aux = dynamic_cast<cListaAlquileres*>(v[i]);
-		cListaAlquileres_aux->
-		i++;
+		if (vector[i] != NULL)
+		{
+			//divido por clase
+			if (dynamic_cast<cAutos*>(vector[i]))
+			{
+			
+			}
+			if (dynamic_cast<cMotos*>(vector[i]))
+			{
+				
+			}
+			if (dynamic_cast<cCamionetas*>(vector[i]))
+			{
+				
+			}
+			if (dynamic_cast<cTrafics*>(vector[i]))
+			{
+				
+			}
+		}
 	}
-	*/ //EU PERO A RE CONTRA CHEQUEAR   ¡¡OK!!
 }
 
 float cListaAlquileres::calcularGananciaTotal()
@@ -87,13 +100,13 @@ bool cListaAlquileres::chequear_si_se_puede_alquilar(cVehiculos* v)
 	}
 }
 
-void cListaAlquileres::registrar_alquiler(cVehiculos* v) 
+void cListaAlquileres::registrar_alquiler(int dni, cVehiculos* vehiculo, int cant_ElementosSeguridad, fecha* inicio_reserva, fecha* fin_reserva)
 {
 	//buscar vehiculo
-	if (chequear_si_se_puede_alquilar(v) == true)
+	if (chequear_si_se_puede_alquilar(vehiculo) == true)
 	{
 		// agrego item a la lista de alquileres
-		AgregarItem(v);
+		AgregarItem(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva,fin_reserva));
 
 		//+(v);    ??? send help
 		//agregar con sobrecarga

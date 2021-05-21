@@ -23,4 +23,5 @@ public:
     void PasosMantenimientoAuto();
     void set_circulacion(bool circ);
     bool get_circulacion();
+    int getPatente();
 };

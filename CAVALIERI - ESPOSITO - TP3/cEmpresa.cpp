@@ -99,9 +99,9 @@ void cEmpresa::RealizarMantenimiento(int patente)
 }
 
 
-void cEmpresa::Alquilar(int patente)
-{
+void cEmpresa::Alquilar(int dni, cVehiculos* vehiculo, int cant_ElementosSeguridad, fecha* inicio_reserva, fecha* fin_reserva)
+{//le paso todos los datos que necesita el constructor de alquiler
 
-	lista_alquileres->registrar_alquiler(lista_vehiculos->BuscarItem(patente));
+	lista_alquileres->registrar_alquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva, fin_reserva);
 
 }

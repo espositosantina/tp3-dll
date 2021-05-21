@@ -50,3 +50,8 @@ bool cTrafics::get_circulacion()
 {
     return esta_circulando;
 }
+
+int cTrafics::getPatente()
+{
+    return patente;
+}

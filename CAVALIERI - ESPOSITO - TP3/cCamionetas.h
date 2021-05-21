@@ -19,4 +19,5 @@ public:
     void PasosMantenimientoCamionetas();
     void set_circulacion(bool circ);
     bool get_circulacion();
+    int getPatente();
 };

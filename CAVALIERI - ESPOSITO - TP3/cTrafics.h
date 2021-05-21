@@ -20,5 +20,7 @@ public:
     void PasosMantenimientoTrafics();
     void set_circulacion(bool circ);
     bool get_circulacion();
+    int getPatente();
+
 };
 

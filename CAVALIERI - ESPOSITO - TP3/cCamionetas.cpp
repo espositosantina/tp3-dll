@@ -51,3 +51,8 @@ bool cCamionetas::get_circulacion()
 {
     return esta_circulando;
 }
+
+int cCamionetas::getPatente()
+{
+    return patente;
+}
