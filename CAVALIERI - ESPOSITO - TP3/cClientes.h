@@ -1,4 +1,9 @@
 #pragma once
+#include <string>
+#include <iostream>
+#define _CRT_SECURE_NO_WARNINGS
+using namespace std;
+
 class cClientes
 {
 	friend class cAlquiler;
@@ -7,6 +12,8 @@ class cClientes
 public:
 	cClientes(const int dni); 
 	~cClientes();
-	//chequar si hay que hacer fucnion para que se  imprima
+
+	void Imprimir();
+	string	Cliente_To_string();
 };
 

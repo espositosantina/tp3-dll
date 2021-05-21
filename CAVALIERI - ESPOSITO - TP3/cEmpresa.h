@@ -1,19 +1,19 @@
 #pragma once
-
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
-
+#include "Lista.h"
 using namespace std;
 
 class cVehiculos;
 class cClientes;
 class cAlquiler;
-class T;
 class cAutos;
 class cMotos;
 class cCamionetas;
 class cTrafics;
 class cListaAlquileres;
+class fecha;
 
 class cEmpresa
 {
@@ -33,6 +33,8 @@ public:
 	void ComenzarCirculacion(int patente);
 	void RetirarCirculacion(int patente);
 	void RealizarMantenimiento(int patente);
+
+	void Imprimir();
 
 	void Alquilar(int dni, cVehiculos* vehiculo, int cant_ElementosSeguridad, fecha* inicio_reserva, fecha* fin_reserva);
 

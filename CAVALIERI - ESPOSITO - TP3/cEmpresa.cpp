@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include "stdio.h"
 #include "pch.h"
 #include "cEmpresa.h"
 #include "cAlquiler.h"
@@ -10,6 +12,11 @@
 #include "cMotos.h"
 #include "cTrafics.h"
 #include "cListaAlquileres.h"
+#include "fecha.h"
+
+#define _CRT_SECURE_NO_WARNINGS
+
+using namespace std;
 
 cEmpresa::cEmpresa(Lista<cVehiculos>* lista_vehiculos, Lista<cClientes>* lista_clientes, cListaAlquileres* lista_alquileres)
 {
@@ -27,8 +34,8 @@ void cEmpresa::AdquirirNuevosVehiculos(cVehiculos* vehiculo)
 	//agrego uno a la lista de vehiculos
 	if (vehiculo != NULL)
 	{
-		lista_vehiculos->AgregarItem(vehiculo);
-		//lista_vehiculos->operator+(vehiculo); // A PREGUNTARRRRRRRRRRRRRRR
+		//lista_vehiculos->AgregarItem(vehiculo);
+		lista_vehiculos->operator+(vehiculo);
 	}
 }
 
@@ -75,6 +82,24 @@ void cEmpresa::RealizarMantenimiento(int patente)
 	}
 }
 
+
+void cEmpresa::Imprimir()
+{
+	cout << "\n Lista de Alquileres de autos: " << endl;
+	lista_alquileres->listarPorAuto();
+	cout << "\n Lista de Alquileres de motos: " << endl;
+	lista_alquileres->listarPorMoto();
+	cout << "\n Lista de Alquileres de camionetas: " << endl;
+	lista_alquileres->listarPorCamioneta();
+	cout << "\n Lista de Alquileres de trafics: " << endl;
+	lista_alquileres->listarPorTrafics();
+
+	cout << "\n Lista de Clientes: " << endl;
+	lista_clientes->Listar();
+	cout << "\n Lista de Vehiculos: " << endl;
+	lista_vehiculos->Listar();
+
+}
 
 void cEmpresa::Alquilar(int dni, cVehiculos* vehiculo, int cant_ElementosSeguridad, fecha* inicio_reserva, fecha* fin_reserva)
 {//le paso todos los datos que necesita el constructor de alquiler

@@ -1,4 +1,6 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
+
 //#include "cAlquiler.h"
 #include "Lista.h"
 

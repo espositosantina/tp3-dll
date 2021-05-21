@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include "funciones.h"
-
+#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 
@@ -30,9 +30,3 @@ public:
 	virtual int getPatente() = 0;
 };
 
-
-ostream& operator<< (ostream& salida, cVehiculos& V)
-{
-    salida << V.To_string();
-    return salida;
-}

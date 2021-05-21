@@ -1,4 +1,5 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
 #include <string>
 #include <iostream>
 using namespace std;
@@ -31,8 +32,11 @@ public:
 	cAlquiler(int dni, cVehiculos* vehiculo,int cant_ElementosSeguridad,fecha* inicio_reserva,fecha* fin_reserva);
 	~cAlquiler();
 
-	void setMontoTotal(int patente);
-	void Imprimir();//cada alquiler
+	void Imprimir();
+	string	Alquiler_To_string();
+
+	void setMontoTotal(cVehiculos* vehiculo);
+	//cada alquiler
 	//cuando imprimo la lista de alquileres tambien imprimir la ganancia total (suma de todos los alquileres)
 
 };

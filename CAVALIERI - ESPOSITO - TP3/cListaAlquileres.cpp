@@ -1,3 +1,4 @@
+#include "pch.h"
 #include <iostream>
 #include "cListaAlquileres.h"
 #include "cAlquiler.h"
@@ -76,8 +77,7 @@ void cListaAlquileres::registrar_alquiler(int dni, cVehiculos* vehiculo, int can
 	{
 		// agrego item a la lista de alquileres
 		//AgregarItem(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva,fin_reserva));
-		this->+(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva, fin_reserva)); // a chequar
-		
+		this->operator+(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva, fin_reserva)); // a chequar
 	}
 }
 
@@ -126,7 +126,6 @@ float cListaAlquileres::GananciaTotalPorMoto()
 	}
 	return acum;
 }
-
 void cListaAlquileres::listarPorMoto()
 {
 	//calcular ganancia total de las MOTOS

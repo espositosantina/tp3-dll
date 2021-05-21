@@ -178,7 +178,6 @@
     <ClCompile Include="cVehiculos.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="fecha.cpp" />
-    <ClCompile Include="Lista.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

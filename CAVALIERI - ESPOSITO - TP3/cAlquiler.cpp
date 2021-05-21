@@ -25,11 +25,18 @@ cAlquiler::~cAlquiler()
 
 void cAlquiler::Imprimir()
 {
-	cout << "\n Cliente: " << dni << "\n Vehiculo: " << vehiculo->To_string()
-		<< "\n Elementos de seguridad: " << cant_ElementosSeguridad
-		<< "\n Fecha de inicio de alquiler: " << inicio_reserva->fechaToString()
-		<< "\n Fecha de fin de alquiler: " << fin_reserva->fechaToString()
-		<< "\n Monto total: " << montoTotal << endl;
+	cout << Alquiler_To_string() << endl;
+}
+
+string cAlquiler::Alquiler_To_string()
+{
+    setMontoTotal(vehiculo);
+	return "\n DNI cliente: " + to_string(dni) + 
+		   "\n Vehiculo:" + vehiculo->To_string() +
+	       "\n Cantidad de elementos de seguridad:" + to_string(cant_ElementosSeguridad)+
+           "\n Fecha de inicio de reserva:" + inicio_reserva->fechaToString() +
+		   "\n Fecha de fin de reserva:" + fin_reserva->fechaToString() +
+		   "\n Monto total a pagar:" + to_string(montoTotal);
 }
 
 void cAlquiler::setMontoTotal(cVehiculos* vehiculo)

@@ -74,9 +74,6 @@
     <ClCompile Include="cAlquiler.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Lista.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="fecha.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
