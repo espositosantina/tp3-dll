@@ -4,6 +4,7 @@
 #define NMAX 10
 #include <string>
 #include <ostream>
+
 using namespace std;
 
 
@@ -145,7 +146,7 @@ bool Lista<T>::AgregarItem(T* item)
 
 	if (CA < TAM)
 		vector[CA++] = item;
-	else throw new exception("No hay tamanio suficiente para agregar el item");;
+	else throw new exception("No hay tamanio suficiente para agregar el item"); //REDIMENSIOAR F :(
 	return true;
 }
 

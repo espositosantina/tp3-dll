@@ -13,6 +13,9 @@ public:
 	cClientes(const int dni); 
 	~cClientes();
 
+	int getClave();
+	bool operator ==(const cClientes& b) const;
+
 	void Imprimir();
 	string	Cliente_To_string();
 };

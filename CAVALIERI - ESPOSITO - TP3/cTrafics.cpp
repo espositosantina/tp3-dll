@@ -55,3 +55,5 @@ int cTrafics::getPatente()
 {
     return patente;
 }
+
+

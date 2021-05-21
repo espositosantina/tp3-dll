@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "cVehiculos.h"
-#include "fecha.h"
-#include "funciones.h"
+
+
 
 cVehiculos::cVehiculos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando): tarifaBase(tarifaBase)
 {
@@ -37,5 +37,18 @@ void cVehiculos::set_circulacion(bool circ)
 bool cVehiculos::get_circulacion()
 {
 	return esta_circulando;
+}
+
+string cVehiculos::getClave()
+{
+	return "HOLA";
+}
+
+bool cVehiculos::operator==(const cVehiculos& b) const
+{
+	if (this->patente == b.patente)
+		return true;
+	else
+		return false;
 }
 

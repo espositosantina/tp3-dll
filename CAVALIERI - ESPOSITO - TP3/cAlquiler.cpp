@@ -39,6 +39,19 @@ string cAlquiler::Alquiler_To_string()
 		   "\n Monto total a pagar:" + to_string(montoTotal);
 }
 
+bool cAlquiler::operator==(const cAlquiler& b) const
+{
+	if (this->dni == b.dni) 
+		return true;
+	else
+		return false;
+}
+
+int cAlquiler::getClave()
+{
+	return dni;
+}
+
 void cAlquiler::setMontoTotal(cVehiculos* vehiculo)
 {
 	montoTotal = vehiculo->CalcularTarifa();

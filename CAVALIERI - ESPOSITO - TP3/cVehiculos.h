@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include "funciones.h"
+#include "fecha.h"
+
 #define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
@@ -28,5 +30,8 @@ public:
 	virtual bool get_circulacion();
 	virtual float CalcularTarifa() = 0;
 	virtual int getPatente() = 0;
+	string getClave();
+	bool operator ==(const cVehiculos& b) const;
+
 };
 
