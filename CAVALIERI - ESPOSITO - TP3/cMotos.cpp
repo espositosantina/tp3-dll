@@ -33,11 +33,13 @@ float cMotos::CalcularTarifa()
     return (tarifaBase + precioMoto);
 }
 
-void cMotos::PasosMantenimiento()
+void cMotos::PasosMantenimientoMotos()
 {
-    cVehiculos::PasosMantenimiento();
-     cout << "1)Limpiar moto y cascos" << endl << "2)Cambiar ruedas" << endl;
-     ultimo_mantenimiento->actualizar_fecha_a_hoy();
+    //cVehiculos::PasosMantenimiento();
+    cout << "Pasos Mantenimiento Moto: " << endl;
+
+    cout << "1)Limpiar moto y cascos" << endl << "2)Cambiar ruedas" << endl;
+    ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }
 
 void cMotos::set_circulacion(bool circ)

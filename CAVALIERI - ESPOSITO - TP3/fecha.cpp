@@ -21,6 +21,21 @@ void fecha::verificar_fecha()
 		anio = 2021;
 }
 
+int fecha::getDia()
+{
+	return dia;
+}
+
+int fecha::getMes()
+{
+	return mes;
+}
+
+int fecha::getAnio()
+{
+	return anio;
+}
+
 string fecha::fechaToString()
 {
 	string fecha_str = "";

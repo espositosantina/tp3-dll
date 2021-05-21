@@ -7,5 +7,6 @@ class cClientes
 public:
 	cClientes(const int dni); 
 	~cClientes();
+	//chequar si hay que hacer fucnion para que se  imprima
 };
 

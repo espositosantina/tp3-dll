@@ -40,10 +40,10 @@ void cVehiculos::Imprimir() {}
 //	}
 //}
 
-void cVehiculos::PasosMantenimiento()
-{
-	cout << "\n Pasos mantenimiento: ";
-}
+//void cVehiculos::PasosMantenimiento()
+//{
+//	cout << "\n Pasos mantenimiento: ";
+//}
 
 void cVehiculos::set_circulacion(bool circ)
 {
@@ -53,3 +53,4 @@ bool cVehiculos::get_circulacion()
 {
 	return esta_circulando;
 }
+

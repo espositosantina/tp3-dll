@@ -18,6 +18,32 @@
 
 using namespace std;
 
+/*
+preguntas pa juli:
+
+AGUANTE TAYLOT SWIFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+CARDIGAAAAAANNNNNNNNNNNNNNN
+
+errores de compilacion de las listas
+las estamos declarando bien?
+
+vehiculos:
+donde declaramos operator <<
+
+empresas :
+AdquirirNuevosVehiculos   -> usamos operator o agregar item?
+RealizarMantenimiento     ->  usamos dynamic cast o no..?
+
+lista Alquileres:
+registrar_alquiler       -> como lo agregamos a la lista con operator
+listarPorTipoVehiculo   ??
+
+cliente:
+se tiene que imprimir
+con operTOR <<   ?
+
+*/
+
 
 int main()
 {

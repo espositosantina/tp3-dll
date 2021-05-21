@@ -3,6 +3,7 @@
 #include "funciones.h"
 #include "fecha.h"
 
+
 cAutos::cAutos(int capacidad_pasajeros, int chasis, eColor color, int patente, int poliza, float tarifaBase, fecha* ultimo_mantenimiento, bool esta_circulando, int cantSillaSeguridad, float precioDia) :cVehiculos(capacidad_pasajeros, chasis, color, patente, poliza, tarifaBase, ultimo_mantenimiento, esta_circulando)
 {
     this->cantSillaSeguridad = cantSillaSeguridad;
@@ -36,9 +37,10 @@ float cAutos::CalcularTarifa()
     return (tarifaBase + precioAuto);
 }
 
-void cAutos::PasosMantenimiento()
+void cAutos::PasosMantenimientoAuto()
 {
-    cVehiculos::PasosMantenimiento();
+   // cVehiculos::PasosMantenimiento();
+    cout << "Pasos Mantenimiento Auto: " << endl;
     cout << "1)Limpiar auto" << endl << "2)Cambiar ruedas" << endl;
     ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }

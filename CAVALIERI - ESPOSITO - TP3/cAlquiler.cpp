@@ -21,7 +21,6 @@ cAlquiler::cAlquiler(int dni, cVehiculos* vehiculo, int cant_ElementosSeguridad,
 
 cAlquiler::~cAlquiler()
 {
-	//eliminar lista si es q la creo aca! ¡¡¡OK!!!
 }
 
 void cAlquiler::Imprimir()
@@ -35,6 +34,6 @@ void cAlquiler::Imprimir()
 
 void cAlquiler::setMontoTotal(cVehiculos* vehiculo)
 {
-montoTotal= calcularTARIFAAAA
+	montoTotal = vehiculo->CalcularTarifa();
 }
 

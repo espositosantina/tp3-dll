@@ -33,11 +33,13 @@ float cTrafics::CalcularTarifa()
     return (tarifaBase + precioTrafic);
 }
 
-void cTrafics::PasosMantenimiento()
+void cTrafics::PasosMantenimientoTrafics()
 {
-    cVehiculos::PasosMantenimiento();
-     cout << "1)Limpiar trafic" << endl << "2)Cambiar ruedas" << endl;
-     ultimo_mantenimiento->actualizar_fecha_a_hoy();
+    //cVehiculos::PasosMantenimiento();
+    cout << "Pasos Mantenimiento Trafics: " << endl;
+
+    cout << "1)Limpiar trafic" << endl << "2)Cambiar ruedas" << endl;
+    ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }
 
 void cTrafics::set_circulacion(bool circ)

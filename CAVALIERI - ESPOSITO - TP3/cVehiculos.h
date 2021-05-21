@@ -25,10 +25,17 @@ public:
 	virtual string To_string();
 	virtual void Imprimir();
 	//void ImprimirVehiculo(string tipo);
-	virtual void PasosMantenimiento();
+	//virtual void PasosMantenimiento();
 	virtual void set_circulacion(bool circ);
 	virtual bool get_circulacion();
-	virtual void alquilar_vehiculo(); //capaz hay que agregarlo a todos los tipos
 	virtual float CalcularTarifa() {}
 };
 
+
+//ostream& operator<< (ostream& salida, string& info);
+//
+//ostream& operator<< (ostream& salida, cVehiculos& V)
+//{
+//    salida << V.To_string();
+//    return salida;
+//}

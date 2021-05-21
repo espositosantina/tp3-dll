@@ -16,7 +16,7 @@ public:
     void Imprimir();
     string To_string();
     float CalcularTarifa();
-    void PasosMantenimiento();
+    void PasosMantenimientoCamionetas();
     void set_circulacion(bool circ);
     bool get_circulacion();
 };

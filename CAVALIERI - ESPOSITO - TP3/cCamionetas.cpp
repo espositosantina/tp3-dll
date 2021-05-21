@@ -34,9 +34,11 @@ float cCamionetas::CalcularTarifa()
     return (tarifaBase + precioCamioneta);
 }
 
-void cCamionetas::PasosMantenimiento()
+void cCamionetas::PasosMantenimientoCamionetas()
 {
-    cVehiculos::PasosMantenimiento();
+    //cVehiculos::PasosMantenimiento();
+    cout << "Pasos Mantenimiento Camioneta: " << endl;
+
     cout << "1)Limpiar camioneta" << endl << "2)Cambiar ruedas" << endl;
     ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }

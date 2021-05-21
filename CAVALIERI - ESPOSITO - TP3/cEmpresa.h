@@ -9,6 +9,11 @@ class cVehiculos;
 class cClientes;
 class cAlquiler;
 class T;
+class cAutos;
+class cMotos;
+class cCamionetas;
+class cTrafics;
+class cListaAlquileres;
 
 class cEmpresa
 {
@@ -16,12 +21,12 @@ class cEmpresa
 	/*Además de alquilar los vehículos, la empresa tiene la capacidad de adquirir
 		nuevos vehículos, de retirarlos de circulación y de realizarles mantenimiento.*/
 
-	Lista<cAlquiler>* lista_alquileres;
+	cListaAlquileres* lista_alquileres;
 	Lista<cVehiculos>* lista_vehiculos;
 	Lista<cClientes>* lista_clientes;
 
 public: 
-	cEmpresa(Lista<cVehiculos>* lista_vehiculos, Lista<cClientes>* lista_clientes, Lista<cAlquiler>* lista_alquileres);
+	cEmpresa(Lista<cVehiculos>* lista_vehiculos, Lista<cClientes>* lista_clientes, cListaAlquileres* lista_alquileres);
 	~cEmpresa();
 
 	void AdquirirNuevosVehiculos(cVehiculos* vehiculo);

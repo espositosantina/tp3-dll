@@ -20,15 +20,7 @@ public:
     void Imprimir();
     string To_string();
     float CalcularTarifa();
-    void PasosMantenimiento();
+    void PasosMantenimientoAuto();
     void set_circulacion(bool circ);
     bool get_circulacion();
 };
-
-//ostream& operator<< (ostream& salida, string& info);
-//
-//ostream& operator<< (ostream& salida, cVehiculos& V)
-//{
-//    salida << V.To_string();
-//    return salida;
-//}

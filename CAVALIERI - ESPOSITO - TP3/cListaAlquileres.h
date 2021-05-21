@@ -6,6 +6,7 @@
 
 class cVehiculos;
 class cAlquiler;
+class fecha;
 
 class cListaAlquileres: public Lista<cAlquiler>
 {
@@ -15,8 +16,8 @@ public:
 	~cListaAlquileres();
 	void listarPorTipoVehiculo();
 	float calcularGananciaTotal();
-	bool chequearVehiculoEnAlquiler(cVehiculos* v);
-	void registrar_alquiler(int patente);
+	bool chequear_si_se_puede_alquilar(cVehiculos* v);
+	void registrar_alquiler(cVehiculos* v);
 	
 
 //void cAlquiler::registrar_alquiler(int patente)
@@ -28,4 +29,5 @@ public:
 //      colmpara fechas y ademas tienen que estar circulando porque 
 //      si esta en mantenimiento no se puede alquilar
 //}
+
 };

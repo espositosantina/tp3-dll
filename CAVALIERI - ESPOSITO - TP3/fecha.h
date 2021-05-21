@@ -15,6 +15,9 @@ public:
 	//si pide actualizar actual usamos localtime y lo guardamos en las variables
 	void actualizar_fecha_a_hoy();
 	void verificar_fecha();
+	int getDia();
+	int getMes();
+	int getAnio();
 
 	string fechaToString();
 };
