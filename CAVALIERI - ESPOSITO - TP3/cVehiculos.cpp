@@ -30,21 +30,6 @@ string cVehiculos::To_string()
 }
 void cVehiculos::Imprimir() {}
 
-//void cVehiculos::ImprimirVehiculo(string tipo)
-//{
-//	switch (tipo)
-//	{
-//	case 1: tipo= auto imprimir()...
-//	default:
-//		break;
-//	}
-//}
-
-//void cVehiculos::PasosMantenimiento()
-//{
-//	cout << "\n Pasos mantenimiento: ";
-//}
-
 void cVehiculos::set_circulacion(bool circ)
 {
 	esta_circulando = circ;

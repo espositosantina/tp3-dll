@@ -24,19 +24,15 @@ public:
 	virtual ~cVehiculos();
 	virtual string To_string();
 	virtual void Imprimir();
-	//void ImprimirVehiculo(string tipo);
-	//virtual void PasosMantenimiento();
 	virtual void set_circulacion(bool circ);
 	virtual bool get_circulacion();
-	virtual float CalcularTarifa() {}
-	virtual int getPatente() {}
+	virtual float CalcularTarifa() = 0;
+	virtual int getPatente() = 0;
 };
 
 
-//ostream& operator<< (ostream& salida, string& info);
-//
-//ostream& operator<< (ostream& salida, cVehiculos& V)
-//{
-//    salida << V.To_string();
-//    return salida;
-//}
+ostream& operator<< (ostream& salida, cVehiculos& V)
+{
+    salida << V.To_string();
+    return salida;
+}

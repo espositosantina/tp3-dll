@@ -50,50 +50,27 @@ void cEmpresa::RetirarCirculacion(int patente)
 	}
 }
 
-//void cEmpresa::RealizarMantenimiento(int patente)
-//{
-//	//si esta en mantenimiento => no esta circulando, es decir, bool esta_circulando = false
-//	if (lista_vehiculos->BuscarItem(patente) != NULL)
-//	{
-//		   lista_vehiculos->BuscarItem(patente)->PasosMantenimiento();
-//		   lista_vehiculos->BuscarItem(patente)->set_circulacion(false);
-//	}
-//}
-
 void cEmpresa::RealizarMantenimiento(int patente)
 {
 	//si esta en mantenimiento => no esta circulando, es decir, bool esta_circulando = false
 
-	// cVehiculos* a = new cAutos;
-	// cVehiculos* m = new cMotos;
-	// cVehiculos* c = new cCamionetas;
-	//cVehiculos* t = new cTrafics;
-
-
 	for (int i = 0; i < lista_vehiculos->getCA(); i++)
 	{
+		cAutos* a = dynamic_cast<cAutos*>(&lista_vehiculos[i]);
+		cMotos * m = dynamic_cast<cMotos*>(&lista_vehiculos[i]);
+		cCamionetas* c = dynamic_cast<cCamionetas*>(&lista_vehiculos[i]);
+		cTrafics* t = dynamic_cast<cTrafics*>(&lista_vehiculos[i]);
+
 		if (lista_vehiculos->BuscarItem(patente) != NULL)
 		{
-			if (dynamic_cast<cAutos*>(&lista_vehiculos[i]))
-			{
-				cAutos* a = dynamic_cast<cAutos*>(&lista_vehiculos[i]);
+			if (a != NULL)
 				a->PasosMantenimientoAuto();
-			}
-			if (dynamic_cast<cMotos*>(&lista_vehiculos[i]))
-			{
-				cMotos* m = dynamic_cast<cMotos*>(&lista_vehiculos[i]);
+			if (m != NULL)
 				m->PasosMantenimientoMotos();
-			}
-			if (dynamic_cast<cCamionetas*>(&lista_vehiculos[i]))
-			{
-				cCamionetas* c = dynamic_cast<cCamionetas*>(&lista_vehiculos[i]);
+			if (c != NULL)
 				c->PasosMantenimientoCamionetas();
-			}
-			if (dynamic_cast<cTrafics*>(&lista_vehiculos[i]))
-			{
-				cTrafics* t = dynamic_cast<cTrafics*>(&lista_vehiculos[i]);
+			if (t != NULL)
 				t->PasosMantenimientoTrafics();
-			}
 		}
 	}
 }

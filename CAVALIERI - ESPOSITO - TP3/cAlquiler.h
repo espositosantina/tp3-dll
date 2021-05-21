@@ -35,6 +35,5 @@ public:
 	void Imprimir();//cada alquiler
 	//cuando imprimo la lista de alquileres tambien imprimir la ganancia total (suma de todos los alquileres)
 
-	void registrar_alquiler(cVehiculos* vehiculo);
 };
 

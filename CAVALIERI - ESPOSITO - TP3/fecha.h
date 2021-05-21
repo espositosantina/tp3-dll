@@ -11,6 +11,7 @@ class fecha
 	unsigned int anio;
 public: 
 	fecha(unsigned int dia, unsigned int mes, unsigned int anio);
+	~fecha();
 
 	//si pide actualizar actual usamos localtime y lo guardamos en las variables
 	void actualizar_fecha_a_hoy();

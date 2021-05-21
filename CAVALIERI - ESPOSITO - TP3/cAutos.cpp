@@ -45,11 +45,6 @@ void cAutos::PasosMantenimientoAuto()
     ultimo_mantenimiento->actualizar_fecha_a_hoy();
 }
 
-//ostream& operator<<(ostream& salida, string& info)
-//{
-//    salida << info;
-//    return salida;
-//}
 
 void cAutos::set_circulacion(bool circ)
 {

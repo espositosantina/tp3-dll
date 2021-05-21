@@ -19,35 +19,6 @@ cListaAlquileres::~cListaAlquileres()
 {
 }
 
-void cListaAlquileres::listarPorTipoVehiculo()
-{
-	/*Se debe poder listar todos los alquileres por tipo de vehiculo y calcular la ganancia total de
-		eso.*/
-
-	for (int i = 0; i < CA; i++)
-	{
-		if (vector[i] != NULL)
-		{
-			//divido por clase
-			if (dynamic_cast<cAutos*>(vector[i]))
-			{
-			
-			}
-			if (dynamic_cast<cMotos*>(vector[i]))
-			{
-				
-			}
-			if (dynamic_cast<cCamionetas*>(vector[i]))
-			{
-				
-			}
-			if (dynamic_cast<cTrafics*>(vector[i]))
-			{
-				
-			}
-		}
-	}
-}
 
 float cListaAlquileres::calcularGananciaTotal()
 {
@@ -63,12 +34,9 @@ float cListaAlquileres::calcularGananciaTotal()
 bool cListaAlquileres::chequear_si_se_puede_alquilar(cVehiculos* v)
 {
 	//devuelve true si se puede
-
- //     verificar que no este alquilado ese vehiculo
-//      colmpara fechas y ademas tienen que estar circulando porque 
-//      si esta en mantenimiento no se puede alquilar
-
-
+    //verificar que no este alquilado ese vehiculo
+    //colmpara fechas y ademas tienen que estar circulando porque 
+    //si esta en mantenimiento no se puede alquilar
 
 	int inicioReserva = 0;
 	int finReserva = 0;
@@ -76,7 +44,8 @@ bool cListaAlquileres::chequear_si_se_puede_alquilar(cVehiculos* v)
 	if (v->get_circulacion() == true) {
 
 		for (int i = 0; i < CA; i++) {
-			if (vector[i]->vehiculo == v) { //pasamos todo a dias
+			if (vector[i]->vehiculo == v) 
+			{ //pasamos todo a dias
 				inicioReserva = vector[i]->inicio_reserva->getDia() + (vector[i]->inicio_reserva->getMes()) * 30 + (vector[i]->inicio_reserva->getAnio()) * 365;
 				finReserva = vector[i]->fin_reserva->getDia() +(vector[i]->fin_reserva->getMes()) * 30 + (vector[i]->fin_reserva->getAnio()) * 365;
 
@@ -106,9 +75,129 @@ void cListaAlquileres::registrar_alquiler(int dni, cVehiculos* vehiculo, int can
 	if (chequear_si_se_puede_alquilar(vehiculo) == true)
 	{
 		// agrego item a la lista de alquileres
-		AgregarItem(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva,fin_reserva));
-
-		//+(v);    ??? send help
-		//agregar con sobrecarga
+		//AgregarItem(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva,fin_reserva));
+		this->+(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva, fin_reserva)); // a chequar
+		
 	}
+}
+
+float cListaAlquileres::GananciaTotalPorAuto()
+{
+	//calcular ganancia total de los AUTOS
+	float acum = 0;
+	for (int i = 0; i < CA; i++)
+	{
+		if (vector[i] != NULL)
+		{
+			cAutos* a = dynamic_cast<cAutos*>(vector[i]->vehiculo);
+			if (a != NULL)
+				acum += a->CalcularTarifa();
+		}
+	}
+	return acum;
+}
+
+void cListaAlquileres::listarPorAuto()
+{
+	//calcular ganancia total de los AUTOS
+	for (int i = 0; i < CA; i++)
+	{
+		if (vector[i] != NULL)
+		{
+			cAutos* a = dynamic_cast<cAutos*>(vector[i]->vehiculo);
+			if (a != NULL)
+				cout << a << endl;  //a chequear
+		}
+	}
+}
+
+float cListaAlquileres::GananciaTotalPorMoto()
+{
+	//calcular ganancia total de las MOTOS
+	float acum = 0;
+	for (int i = 0; i < CA; i++)
+	{
+		if (vector[i] != NULL)
+		{
+			cMotos* m = dynamic_cast<cMotos*>(vector[i]->vehiculo);
+			if (m != NULL)
+				acum += m->CalcularTarifa();
+		}
+	}
+	return acum;
+}
+
+void cListaAlquileres::listarPorMoto()
+{
+	//calcular ganancia total de las MOTOS
+	for (int i = 0; i < CA; i++)
+	{
+		if (vector[i] != NULL)
+		{
+			cMotos* m = dynamic_cast<cMotos*>(vector[i]->vehiculo);
+			if (m != NULL)
+				cout << m << endl;  //a chequear
+		}
+	}
+}
+
+void cListaAlquileres::listarPorCamioneta()
+{
+	//calcular ganancia total de las CAMIONETAS
+	for (int i = 0; i < CA; i++)
+	{
+		if (vector[i] != NULL)
+		{
+			cCamionetas* c = dynamic_cast<cCamionetas*>(vector[i]->vehiculo);
+			if (c != NULL)
+				cout << c << endl;  //a chequear
+		}
+	}
+}
+
+float cListaAlquileres::GananciaTotalPorCamioneta()
+{
+	//calcular ganancia total de las CAMIONETAS
+	float acum = 0;
+	for (int i = 0; i < CA; i++)
+	{
+		if (vector[i] != NULL)
+		{
+			cCamionetas* c = dynamic_cast<cCamionetas*>(vector[i]->vehiculo);
+			if (c != NULL)
+				acum += c->CalcularTarifa();
+		}
+	}
+	return acum;
+}
+
+
+void cListaAlquileres::listarPorTrafics()
+{
+	//calcular ganancia total de los TRAFICS
+	for (int i = 0; i < CA; i++)
+	{
+		if (vector[i] != NULL)
+		{
+			cTrafics* t = dynamic_cast<cTrafics*>(vector[i]->vehiculo);
+			if (t != NULL)
+				cout << t << endl;  //a chequear
+		}
+	}
+}
+
+float cListaAlquileres::GananciaTotalPorTrafics()
+{
+	//calcular ganancia total de los TRAFICS
+	float acum = 0;
+	for (int i = 0; i < CA; i++)
+	{
+		if (vector[i] != NULL)
+		{
+			cTrafics* t = dynamic_cast<cTrafics*>(vector[i]->vehiculo);
+			if (t != NULL)
+				acum += t->CalcularTarifa();
+		}
+	}
+	return acum;
 }

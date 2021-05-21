@@ -9,6 +9,9 @@ fecha::fecha(unsigned int dia, unsigned int mes, unsigned int anio)
 	this->anio = anio;
 	verificar_fecha();
 }
+fecha::~fecha()
+{
+}
 void fecha::verificar_fecha()
 {
 	if (dia > 31)
