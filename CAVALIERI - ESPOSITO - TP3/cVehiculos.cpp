@@ -41,7 +41,7 @@ bool cVehiculos::get_circulacion()
 
 string cVehiculos::getClave()
 {
-	return "HOLA";
+	return to_string(patente);
 }
 
 bool cVehiculos::operator==(const cVehiculos& b) const

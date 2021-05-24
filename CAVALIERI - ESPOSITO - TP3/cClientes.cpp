@@ -13,9 +13,9 @@ bool cClientes::operator==(const cClientes& b) const
 		return false;
 }
 
-int cClientes::getClave()
+string cClientes::getClave() 
 {
-	return dni;
+	return to_string(dni);
 }
 
 void cClientes::Imprimir()

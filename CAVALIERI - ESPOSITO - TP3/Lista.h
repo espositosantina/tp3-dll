@@ -34,8 +34,8 @@ public:
 
 	void Listar();
 
-	template<class C>
-	T* BuscarItem(C clave);
+	
+	T* BuscarItem(string clave);
 
 	T* BuscarItem(T* item);
 	T* getItem(unsigned int pos);
@@ -212,16 +212,16 @@ void Lista<T>::Eliminar(unsigned int pos) {
 }
 
 template<class T>
-template<class C>
-T* Lista<T>::BuscarItem(C clave)
+T* Lista<T>::BuscarItem(string clave)
 {
 	for (unsigned int i = 0; i < CA; i++)
 	{
-		if ((*vector[i]) == clave)
+		if (vector[i]->getClave() == clave)
 			return vector[i];
 	}
 	return NULL;
 }
+
 
 template<class T>
 T* Lista<T>::BuscarItem(T* item)

@@ -13,7 +13,7 @@ public:
 	cClientes(const int dni); 
 	~cClientes();
 
-	int getClave();
+	string getClave();
 	bool operator ==(const cClientes& b) const;
 
 	void Imprimir();

@@ -47,9 +47,9 @@ bool cAlquiler::operator==(const cAlquiler& b) const
 		return false;
 }
 
-int cAlquiler::getClave()
+string cAlquiler::getClave()
 {
-	return dni;
+	return to_string(dni);
 }
 
 void cAlquiler::setMontoTotal(cVehiculos* vehiculo)

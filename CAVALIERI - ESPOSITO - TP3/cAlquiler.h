@@ -35,7 +35,7 @@ public:
 	void Imprimir();
 	string	Alquiler_To_string();
 	bool operator ==(const cAlquiler& b) const;
-	int getClave();
+	string getClave();
 	void setMontoTotal(cVehiculos* vehiculo);
 	//cada alquiler
 	//cuando imprimo la lista de alquileres tambien imprimir la ganancia total (suma de todos los alquileres)

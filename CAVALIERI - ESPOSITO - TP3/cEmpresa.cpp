@@ -41,19 +41,19 @@ void cEmpresa::AdquirirNuevosVehiculos(cVehiculos* vehiculo)
 
 void cEmpresa::ComenzarCirculacion(int patente)
 {
-	if (lista_vehiculos->BuscarItem(patente) != NULL)
+	if (lista_vehiculos->BuscarItem(to_string(patente)) != NULL)
 	{
-		if (lista_vehiculos->BuscarItem(patente)->get_circulacion() == false)
-			lista_vehiculos->BuscarItem(patente)->set_circulacion(true);
+		if (lista_vehiculos->BuscarItem(to_string(patente))->get_circulacion() == false)
+			lista_vehiculos->BuscarItem(to_string(patente))->set_circulacion(true);
 	}
 }
 
 void cEmpresa::RetirarCirculacion(int patente)
 {
-	if (lista_vehiculos->BuscarItem(patente)!= NULL)
+	if (lista_vehiculos->BuscarItem(to_string(patente))!= NULL)
 	{
-		if (lista_vehiculos->BuscarItem(patente)->get_circulacion() == true)
-			lista_vehiculos->BuscarItem(patente)->set_circulacion(false);
+		if (lista_vehiculos->BuscarItem(to_string(patente))->get_circulacion() == true)
+			lista_vehiculos->BuscarItem(to_string(patente))->set_circulacion(false);
 	}
 }
 
@@ -68,7 +68,7 @@ void cEmpresa::RealizarMantenimiento(int patente)
 		cCamionetas* c = dynamic_cast<cCamionetas*>(&lista_vehiculos[i]);
 		cTrafics* t = dynamic_cast<cTrafics*>(&lista_vehiculos[i]);
 
-		if (lista_vehiculos->BuscarItem(patente) != NULL)
+		if (lista_vehiculos->BuscarItem(to_string(patente)) != NULL)
 		{
 			if (a != NULL)
 				a->PasosMantenimientoAuto();
