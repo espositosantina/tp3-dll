@@ -70,6 +70,7 @@ void cEmpresa::RealizarMantenimiento(int patente)
 
 		if (lista_vehiculos->BuscarItem(to_string(patente)) != NULL)
 		{
+			lista_vehiculos->getItem(i)->set_circulacion(false);
 			if (a != NULL)
 				a->PasosMantenimientoAuto();
 			if (m != NULL)

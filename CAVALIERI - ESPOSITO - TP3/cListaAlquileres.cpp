@@ -76,8 +76,8 @@ void cListaAlquileres::registrar_alquiler(int dni, cVehiculos* vehiculo, int can
 	if (chequear_si_se_puede_alquilar(vehiculo) == true)
 	{
 		// agrego item a la lista de alquileres
-		//AgregarItem(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva,fin_reserva));
-		this->operator+(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva, fin_reserva)); // a chequar
+		this->operator+(new cAlquiler(dni, vehiculo, cant_ElementosSeguridad, inicio_reserva, fin_reserva));
+
 	}
 }
 

@@ -15,7 +15,7 @@
 #include "cClientes.h"
 #include "Lista.h"
 #include "cListaAlquileres.h"
-
+#define tam 10
 
 using namespace std;
 
@@ -48,21 +48,23 @@ se tiene que imprimir
 con operTOR <<   ?
 
 */
-
+//¡¡¡NO OLVIDARNOS DE REDIMENSIONAR CUANDO LLAMAMOS A AGREGAR ITEM!!!
 
 int main()
 {
-    //TODO ESCORPIO PERRO 
+    
 	fecha fecha1 = fecha(15, 11, 2020);
 	fecha fecha2 = fecha(14, 11, 2020);
 	fecha fecha3 = fecha(13, 11, 2020);
-	fecha fecha4 = fecha(12 ,11 , 2020);
+	fecha fecha4 = fecha(12, 11, 2020);
+	fecha incio = fecha(16, 11, 2020);
+	fecha fin = fecha(25, 11, 2020);
 	
 
-	cListaAlquileres* listaA = new cListaAlquileres(10);
-	Lista<cClientes> listaC(10, false);
+	cListaAlquileres* listaA = new cListaAlquileres(tam);
+	Lista<cClientes> listaC(tam, false);
 	
-	listaC.AgregarItem(new cClientes(1111));
+	listaC.AgregarItem(new cClientes(1111)); 
 
 	Lista<cVehiculos> listaV(10, false);
 	listaV.AgregarItem(new cAutos(1, 11, Rosa, 111, 1111, 10, &fecha1,true, 1, 100));
@@ -78,27 +80,26 @@ int main()
 	{
 		listaV[i]->Imprimir();
 		empresa->AdquirirNuevosVehiculos(listaV[i]);
-		
 	}
-	empresa->RetirarCirculacion(111);
-	listaV[0]->Imprimir();
 
+	empresa->Alquilar(111, listaV[0], 3, &incio, &fin); 
 	empresa->RealizarMantenimiento(333);
+	empresa->Alquilar(333, listaV[2], 5, &incio, &fin); //no deberia poder alquilar porque se esta realizando el mantenimiento
 	empresa->ComenzarCirculacion(333);
+	empresa->Alquilar(333, listaV[2], 5, &incio, &fin);
 
-	//en realidad, comenzar y retirar circulacion deberian llamarse dentro de la funcion alquilar
+	empresa->Imprimir();
 
 
 	//-----------------TERMINAMOS DE IMPLEMENTAR METODOS-----------------
 
-	for (int i = 0; i < 4; i++)
-	{
-		delete listaV[i];
-	}
-	
+	listaC.SetEliminarContenido(true);
+	listaV.SetEliminarContenido(true);
+	listaA->SetEliminarContenido(true);
+	//chequear!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! si se eliminarian
+
 	delete empresa;
-	delete listaC[0];
-	delete listaA;
+
 
 	system("pause");
 	return 0;

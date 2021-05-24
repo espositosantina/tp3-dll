@@ -22,6 +22,8 @@ public:
 	Lista(unsigned int TAM = NMAX, bool EliminarContenido = true);
 	virtual ~Lista();
 
+	void SetEliminarContenido(bool);
+
 	bool AgregarItem(T* item);
 
 	T* Quitar(string clave);
@@ -54,6 +56,11 @@ public:
 };
 
 
+template<class T>
+void Lista<T>::SetEliminarContenido(bool Eliminar)
+{
+	EliminarContenido = Eliminar;
+}
 
 template<class T>
 unsigned int Lista<T>::getTAM()
@@ -146,7 +153,8 @@ bool Lista<T>::AgregarItem(T* item)
 
 	if (CA < TAM)
 		vector[CA++] = item;
-	else throw new exception("No hay tamanio suficiente para agregar el item"); //REDIMENSIOAR F :(
+	else throw new exception("No hay tamanio suficiente para agregar el item");
+	//llamar a redimensionar
 	return true;
 }
 

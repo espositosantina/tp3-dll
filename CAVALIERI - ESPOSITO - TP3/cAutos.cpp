@@ -39,7 +39,6 @@ float cAutos::CalcularTarifa()
 
 void cAutos::PasosMantenimientoAuto()
 {
-   // cVehiculos::PasosMantenimiento();
     cout << "Pasos Mantenimiento Auto: " << endl;
     cout << "1)Limpiar auto" << endl << "2)Cambiar ruedas" << endl;
     ultimo_mantenimiento->actualizar_fecha_a_hoy();
